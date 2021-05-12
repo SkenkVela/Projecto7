@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/precoFabrica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:ems="10"
+        android:hint="Insira o preço da Fábrica"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/distribuidorPerc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/distribuidorPerc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="number|textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/impostoPerc" />
+
+    <EditText
+        android:id="@+id/impostoPerc"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="96dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:gravity="center"
+        android:text="Percentuais"
+        app:layout_constraintEnd_toEndOf="@+id/impostoPerc"
+        app:layout_constraintStart_toStartOf="@+id/distribuidorPerc"
+        app:layout_constraintTop_toBottomOf="@+id/precoFabrica" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="186dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="26dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_imposto"
+        android:layout_width="181dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="98dp"
+        android:background="#7E7979"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_precoTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_calcular" />
+
+    <TextView
+        android:id="@+id/lbl_distribuidor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#7E7979"
+        android:gravity="clip_vertical"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_imposto"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_imposto"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/lbl_imposto" />
+
+    <TextView
+        android:id="@+id/lbl_precoTotal"
+        android:layout_width="143dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginBottom="203dp"
+        android:background="#7E7979"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_distribuidor"
+        app:layout_constraintStart_toEndOf="@+id/lbl_distribuidor"
+        app:layout_constraintTop_toTopOf="@+id/btn_calcular" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="340dp"
+        android:text="Distribuidor valor : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Valor do imposto : "
+        app:layout_constraintBottom_toTopOf="@+id/lbl_imposto"
+        app:layout_constraintStart_toStartOf="@+id/lbl_imposto" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="26dp"
+        android:gravity="center"
+        android:text="Preço total do carro : "
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_precoTotal"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/lbl_distribuidor"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_distribuidor" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginRight="118dp"
+        android:text="Distribuidora"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/btn_calcular"
+        app:layout_constraintTop_toBottomOf="@+id/impostoPerc" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="80dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginBottom="79dp"
+        android:text="Imposto"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_calcular"
+        app:layout_constraintStart_toEndOf="@+id/distribuidorPerc"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
